@@ -1,0 +1,6 @@
+chmod a+x src/test/scripts/*.sh
+
+# Skip Exec57Test (it is unstable), see rhbz#1202260
+find -name Exec57Test.java -delete
+
+python3 /usr/share/java-utils/mvn_file.py :commons-exec commons-exec apache-commons-exec
